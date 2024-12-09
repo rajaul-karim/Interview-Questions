@@ -54,3 +54,19 @@ Write a Terraform configuration that creates an AWS Lambda function using Python
 2. Log the file name of the uploaded object to CloudWatch Logs.
 3. The Lambda function's code should be provided in a local file lambda_function.py.
 4. Add a CloudWatch log group with a retention policy of 7 days.
+
+## Question 2: Dynamic VPC and Subnet Creation with Terraform
+
+How can we use terraform to dynamically deploy a VPC with 1 subnet in each availability zone.
+    Region value and VPC CIDR block will be given as input.
+    Terraform should dynamically provision a subnet for each availability Zone.
+
+Example 1 – 
+    N California – us-west-1 – 2 availability zones
+    VPC CIDR – 10.0.0.0/16
+    Subnet CIDRs – [ 10.0.0.0/17, 10.0.128.0/17 ]
+
+Example 2 – 
+    Oregon – us-west-2 – 4 availability zones
+    VPC CIDR – 10.0.0.0/16
+    Subnet CIDRs – [ 10.0.0.0/18, 10.0.64.0/18, 10.0.128.0/18, 10.0.192.0/18 ]
